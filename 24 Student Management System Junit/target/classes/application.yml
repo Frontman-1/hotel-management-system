@@ -1,0 +1,57 @@
+server:
+    port: 8081
+spring:
+    application:
+        name: 24StudentManagementSystem
+    datasource:
+        password: 1538
+        url: jdbc:mysql://localhost:3306/24studentmanagementsystem
+        username: root
+    jpa:
+        generate-ddl: true
+        hibernate:
+            ddl-auto: update
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.MySQLDialect
+        show-sql: true
+    output:
+      ansi:
+         enabled: always
+        
+        
+management:
+   endpoints:
+      web:
+         exposure:
+            include: '*'
+#            base-path: '/admin'  
+   endpoint:
+       health:
+          show-details: always
+   info:
+      env:
+         enabled: true
+         
+info:
+   app:
+      description: This application fetches all the connection of a user
+      name: StudentManagementSystem
+      version: 1.0
+      
+#logging:
+#   level:
+#      root: TRACE
+
+
+#logging:
+#   level:
+#      com:
+#         example:
+#            socialMedia: TRACE
+
+#logging:
+#     file:
+#         name: logger.log
+#      pattern:
+#         file: '%d{yyyy-MM-dd} [%level] %c{1.} [%t] %m%n'
